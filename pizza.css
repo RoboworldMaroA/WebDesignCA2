@@ -1,0 +1,87 @@
+/*
+
+css file for CA2 Software Development
+pizza.css
+Marek Augustyn
+25.11.2020
+
+*/
+
+body{
+	background-color: #b2b2b2;
+	background-image: url("pizza2.jpg");
+	background-size: 105%;
+}
+
+#company_name{
+	position:absolute;
+	font-weight: bold;
+	color: #000000;
+	font-size:45px;
+	right: 490px;
+	top: -42px;
+	
+}
+
+.Login_Details{
+	width:27%;
+	margin-left:2%;
+	margin-top:4%;
+}
+
+Legend{
+	font-size:20px;
+	color:#000;
+	background-color: #eaece5;
+	margin-bottom: 3%;
+	border-radius: 10px;
+}
+
+Fieldset{
+	background-color: #eaece5;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#pizzaform{
+	margin-top:2%;
+}
+
+.content_order{
+	width:27%;
+	margin-left:2%;
+}
+
+.pay_now{
+	width:5%;
+	margin-left:3%;
+	margin-top: 1%;
+}
+
+#button	 {
+	background-color:#f7786b;
+	color: #ffef96;
+	border-radius: 4px;
+}
+
+#button_password {
+	background-color:#f7786b;
+	color: #ffef96;
+	border-radius: 4px;
+}
+
+
+
+
+
+
+#totalPrice{
+	background-color: #ffcc5c;	
+}
+
+.error{
+        color: red;
+    }
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order pizza</title>
+    <script src="calculations_orders.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="Jquerry_index.js"></script>
+		
+    <link href="pizza.css" rel="stylesheet" type="text/css" /> 
+
+</head>
+	<body>
+		
+	<div class="main_content">
+	    <div>
+			<p id="company_name"> Jamie's Pizza Place </p>
+	    </div>
+	
+		<div class="Login_Details">
+			<form name="myform"> 
+			<fieldset>
+			<legend>Login Details</legend>
+			<label>User name  </label>
+			<br>
+			<input type="text" name="name">
+			<br>			
+			<label>Password</label>
+			<br>
+			<input type="password" name="password">
+			<br>
+			<br>
+			<input id="button_password" type="submit" value="Register" onclick="return validatePassword()">  
+			</fieldset>
+			</form> 
+		</div>
+				
+		<form id="pizzaform" onsubmit="return false;" >
+			<div>
+				<div class="content_order">
+				    <fieldset>
+					<legend>Order your pizza</legend>
+					    <label for='pizza_size'> Pick your pizza size from the list:  </label> 
+						<select id="pizza_size" name='pizza_size' onchange="calculateTotal(quantity)">
+							<option value="None">Select Size</option> 
+							<option value="Large">Large (&euro;5.00)</option>
+							<option value="Extra_large">Extra-Large(&euro;7.00)</option>
+							<option value="Super_size">Supersize(&euro;17.00)</option>
+							
+					    </select>
+						<p> <label for="quantity">Quantity:</label>
+						<input type="text" id="quantity" name="quantity" onchange="calculateTotal(quantity)" value="0" > 
+						</p>
+						<br/>
+				   		<p> <label for="discount">You can apply discount code ('extracheese')</label>
+						<input type="text" id="discount" name="discount">
+						<input id="button" type="submit" value="Apply discount" onclick="validateDiscount()">
+						<div id="alarm_discount"></div>
+						<br>
+						<div id="totalPrice"></div>
+						<div id="alarmSupersize"></div>
+					</fieldset>
+				</div>
+			</div> 
+        </form>	
+		<div class="pay_now">
+				<input type='submit' id='submit' value='Pay' onclick="validatePassword(),validateDiscount()"/>
+			</div>		
+		
+	</div>
+  
+	</body>
+</html>
